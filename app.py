@@ -12,6 +12,7 @@ app = Flask(__name__, template_folder=template_folder)
 app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'
 freezer = Freezer(app)
 
 @app.cli.command()
